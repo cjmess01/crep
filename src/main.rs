@@ -1,12 +1,18 @@
-use std::io;
+use std::env;
+use std::process::exit;
 
 fn main() {
-    println!("Usage: crep <pattern> <filename> -flags");
-    println!("Flags:");
+    let args: Vec<String> = env::args().collect();
 
-    let mut input = String::new();
-    io::stdin().read_line(&mut input).unwrap();
-    println!("Query: {input}");
-
-    // A comment
+    // Pulls args[1] and args[2] and sets them to pattern and filename
+    // if case of <3 args, exits
+    let (pattern, filename) = match args.as_slice() {
+        [_, a, b, ..] => (a, b),
+        _ => {
+            println!("Usage: crep <pattern> <filename> -flags");
+            exit(100);
+        }
+    };
+    println!("{pattern}");
+    println!("{filename}");
 }
