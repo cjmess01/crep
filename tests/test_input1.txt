@@ -1,0 +1,50 @@
+This is a simple test file to test pattern matching.
+Rust is fast, and rust is memory safe.
+Sometimes RUST appears in uppercase.
+
+The system encountered an error while processing the request.
+Another error occurred during the error handling routine.
+Critical error: error error error.
+
+This line has no special keywords.
+Just some ordinary text that should not match anything interesting.
+
+Warning: this is a warning message.
+Another warning has been issued.
+warning warning warning repeated many times.
+
+Rust makes systems programming safer.
+Many developers enjoy writing Rust code.
+Some people compare rust to C++.
+Others say Rust is more modern than rust from 2010.
+
+Pattern matching is powerful in Rust.
+This pattern should match the word pattern.
+pattern pattern pattern everywhere.
+
+Here is a very very very long line with repeated words like error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error.
+
+Short.
+error
+warning
+rust
+pattern
+
+Line with multiple keywords: rust error warning pattern rust error warning pattern.
+
+Edge case line with tabs	and	spaces and error at the end error
+
+Numbers should not match unless searching them: 12345 67890 12345 67890.
+
+MixedCaseError should not match lowercase error unless case insensitive.
+RUSTrustRUSTrust
+
+The quick brown fox jumps over the lazy dog.
+Nothing to see here.
+Still nothing here.
+
+Final error line.
+Final warning line.
+Final rust line.
+Final pattern line.
+
