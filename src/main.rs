@@ -65,6 +65,7 @@ fn crep_file_line_major(filename: &str, pattern: &Regex) -> std::io::Result<u32>
                 ind_match.end() - ind_match.start(),
                 &line,
             );
+            total_matches += 1;
         }
     }
     Ok(total_matches)
