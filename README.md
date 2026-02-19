@@ -34,4 +34,32 @@ Ok basic REGEX works, "cargo run "(?i)rust" .\tests\test_input1.txt" worked whic
 It is printing separately in each line, which I would prefer it do each match on one line
 next goal is to do that,
 
-single line, multiple match -> folder searching w/ line major callback -> flags -> boyer moore.
+2/16/10:03
+Honestly on reflection I think the printing all matches on one line will either:
+
+1. Destroy the constant space aspect of the program by requiring a a vector of matches for each line
+2. Requiring printing out a character at a time which would suck
+
+EIther way, this will complicate the actual use of the tool, matches on different lines should be treated differently
+Instead I am now going to wire up flags
+folder searching w/ line major callback -> flags -> boyer moore.
+
+Ok so I have to make a decision if I want to use BFS or DFS when seraching the folders
+It may make sense to use DFS because it is less memory, but idk
+I think I'll have a flag that allows BFS.
+I also think I need to restructure it to divide into folder, file, symlink within one function instead of main.
+
+2/18
+I have folders working, but now I need to add the flags to modify behavior. Order will be pretty loose.
+I fixed the parsing arguments now to handle flags
+
+2/19
+Major flags to consider:
+single char flags
+-r = recursive searching
+-c = just print count instead of matches
+-n = use line major as opposed to boyer moore
+--recurse-depth = how far in the directory to go down
+
+I am going to build an options struct with all possible options. Input gets parsed and defaults are set unless the flags change it.
+Then, the main loop will pass the options struct everywhere, and it will be consulted inside inner functions, NOT the main loop.
