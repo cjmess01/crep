@@ -2,6 +2,8 @@ This is a simple test file to test pattern matching.
 Rust is fast, and rust is memory safe.
 Sometimes RUST appears in uppercase.
 
+rust 
+
 The system encountered an error while processing the request.
 Another error occurred during the error handling routine.
 Critical error: error error error.
